@@ -8,8 +8,6 @@ public class ScannerDemoNoExceptions {
     ScannerDemoNoExceptions(){
         Scanner sc = new Scanner(System.in);
         int kostnad = 0;
-        int betalning = 0;
-        int växel = 0;
         
         System.out.println("Skriv din kostnad: ");
         
@@ -20,8 +18,9 @@ public class ScannerDemoNoExceptions {
                     gettingKostnad = true;
                 }
                 else if (sc.hasNext()){
-                    System.out.println("Felaktig kostnad, försök igen (else)");
-                    sc.next();
+                    System.out.println("Felaktig kostnad, försök igen ");
+                    //vi måste äta upp vårt token för att inte fastna i oändlig loop
+                    sc.next();  
                 }
         }
         

@@ -9,4 +9,9 @@ public class Student extends Person{
         this.kurs = kurs;
     }
     
+    @Override
+    public void printMe(){
+        System.out.println("Jag är Student");
+    }
+    
 }

@@ -13,8 +13,8 @@ public class ScannerDemoMiniExcptions {
             i = sc.nextInt();
         }
         catch (InputMismatchException e){
-            System.out.println("Fel typ på indata");
-            //e.printStackTrace();
+            //System.out.println("Fel typ på indata");
+            e.printStackTrace();
         }
         catch (Exception e){
             System.out.println("Okänt fel inträffade");

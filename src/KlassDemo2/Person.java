@@ -1,8 +1,6 @@
 package KlassDemo2;
 
-import KlassDemo1.*;
-
-public class Person {
+public abstract class Person {
     
     private String name;
     
@@ -16,5 +14,9 @@ public class Person {
     
     public void setName(String newName){
         name = newName;
+    }
+    
+    public void printMe(){
+        System.out.println("Jag är Person");
     }
 }

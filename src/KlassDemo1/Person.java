@@ -2,10 +2,12 @@ package KlassDemo1;
 
 public class Person {
     
-    private String name;
+    protected String name;
+    protected Integer age;
     
-    Person (String name){
+    Person (String name, int age){
         this.name = name;
+        this.age = age;
     }
     
     public String getName(){
