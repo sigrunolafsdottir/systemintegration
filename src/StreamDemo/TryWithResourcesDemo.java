@@ -8,8 +8,9 @@ public class TryWithResourcesDemo {
     
     public static void main(String[] args){
         String tempLine;
-        try (BufferedReader bufIn = new BufferedReader(new FileReader ("src\\StreamDemo\\Luka.txt"));){
-            while((tempLine = bufIn.readLine()) != null){
+       // try (BufferedReader bufIn = new BufferedReader(new FileReader ("src\\StreamDemo\\Luka.txt"));){
+        try (FileReader f = new FileReader ("src\\StreamDemo\\Luka.txt");){
+            while((tempLine = String.valueOf(f.read())).equals("-1") ){
                 System.out.println(tempLine);
             }
         }
