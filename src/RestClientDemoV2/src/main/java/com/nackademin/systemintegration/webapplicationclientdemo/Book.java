@@ -1,6 +1,7 @@
 package com.nackademin.systemintegration.webapplicationclientdemo;
 
 import java.io.Serializable;  
+import java.util.Date;
 import javax.xml.bind.annotation.XmlElement; 
 import javax.xml.bind.annotation.XmlRootElement; 
 @XmlRootElement(name = "book") 
@@ -9,6 +10,7 @@ public class Book  implements Serializable{
     private static final long serialVersionUID = 1L;
     private String title;
     private String author;
+    private Date read;
     private int id;
     
     public Book(){}
@@ -43,5 +45,13 @@ public class Book  implements Serializable{
    @XmlElement 
     public void setAuthor(String author) {
         this.author = author;
+    }
+    
+    public Date getRead() {
+        return read;
+    }
+   @XmlElement 
+    public void setRead(Date read) {
+        this.read = read;
     }
 }

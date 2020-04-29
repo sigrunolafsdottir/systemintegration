@@ -19,7 +19,8 @@ public class VerySimpleDemo {
                              "sigrun",
                              "secretpassword");
             Statement stmt =  con.createStatement();
-            ResultSet rs = stmt.executeQuery("select id, name, city from customer")) {
+            ResultSet rs = stmt.executeQuery(
+                    "select id, name, city from customer")) {
 
             while (rs.next()) {
                 int id = rs.getInt("id");

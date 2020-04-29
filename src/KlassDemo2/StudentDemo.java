@@ -8,7 +8,7 @@ public class StudentDemo {
     
     public static void main (String[] args){
         
-        Student s = new Student ("Sanna", "Systemintegration");
+        Student s = new Student ("Sanna", "Nätverksprogrammering");
         //System.out.println(s.getName());
         
         Person p = new Student ("Pelle", "fdsfs");  //hur kan detta funka?

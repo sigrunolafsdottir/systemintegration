@@ -35,7 +35,13 @@ public class BookClient {
         
         //Converting an array to List
         List<Book> bookList = Arrays.asList(bookArray);
-       
+        
+//        String response = service.path("rest/BookService/book/1/deleteJSON")
+//                .accept(MediaType.APPLICATION_JSON).get(String.class);
+//       
+        String xmlString2 = service.path("rest/BookService/books")
+                .accept(MediaType.APPLICATION_XML).get(String.class);
+        System.out.println(xmlString2);
     }
 }
 

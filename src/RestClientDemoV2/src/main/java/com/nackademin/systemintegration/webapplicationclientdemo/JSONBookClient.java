@@ -22,7 +22,8 @@ public class JSONBookClient {
         Gson gson = new Gson();
         
         //Getting one book
-        String jsonBook = service.path("rest/BookService/bookJSON/1")
+        //String jsonBook = service.path("rest/BookService/bookJSON/1")
+        String jsonBook = service.path("rest/BookDBService/bookJSON/1")
                 .accept(MediaType.APPLICATION_JSON).get(String.class);
         System.out.println(jsonBook);
         System.out.println();
@@ -32,14 +33,15 @@ public class JSONBookClient {
                 +book.getTitle() +" author: "+book.getAuthor()+ "\n");
         
         //Getting all books
-        String jsonString = service.path("rest/BookService/booksJSON")
+       // String jsonString = service.path("rest/BookService/booksJSON")
+       String jsonString = service.path("rest/BookDBService/booksJSON")
         .accept(MediaType.APPLICATION_JSON).get(String.class);
         System.out.println(jsonString);
         System.out.println();
         
         Book[] books = gson.fromJson(jsonString, Book[].class);
         for (Book b : books){
-            System.out.println("Book info, id: "+b.getId()+" title: "+b.getTitle() +" author: "+b.getAuthor());
+            System.out.println("Book info, id: "+b.getId()+" title: "+b.getTitle() +" author: "+b.getAuthor()+" date: "+b.getRead());
         }
         
         //COnvert POJO to JSON

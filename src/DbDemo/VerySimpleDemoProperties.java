@@ -14,13 +14,20 @@ import java.util.Properties;
 //Try with resources saves a lot of closing...
 public class VerySimpleDemoProperties {
 
-    public static void main(String[] args) throws ClassNotFoundException, FileNotFoundException, IOException {
+    public static void main(String[] args) throws  FileNotFoundException, IOException {
         
-        Class.forName("com.mysql.jdbc.Driver");
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        }
+        catch (ClassNotFoundException e){
+            System.out.println("klassen kunde inte hittas: com.mysql.jdbc.Driver");
+            e.printStackTrace();
+        }
         Properties p = new Properties();
         p.load(new FileInputStream("src/DbDemo/Settings.properties"));
         
-        try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
+        try (Connection con = DriverManager.getConnection(
+                p.getProperty("connectionString"),
                              p.getProperty("name"),
                              p.getProperty("password"));
             Statement stmt =  con.createStatement();
@@ -32,7 +39,7 @@ public class VerySimpleDemoProperties {
                 String city = rs.getString("city");
 
                 System.out.println("id: " + id + ", name: " + name + ", city: " + city);
-        }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

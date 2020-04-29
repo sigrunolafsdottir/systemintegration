@@ -12,7 +12,7 @@ public class PersonDemo {
         System.out.println(p.getName());
         
         //p.setName("Bertil");
-        p.name = "Hej";
+        //p.name = "Hej";
         System.out.println(p.getName());
     }
 
