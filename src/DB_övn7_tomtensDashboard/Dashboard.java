@@ -1,4 +1,4 @@
-package V3_övn7_tomtensDashboard;
+package DB_övn7_tomtensDashboard;
 
 import java.util.List;
 import static java.util.stream.Collectors.toList;

@@ -1,7 +1,7 @@
-package V3_övn11_printChildren;
+package DB_övn11_printChildren;
 
 import java.util.List;
-import V3_övn11_printChildren.Models.Child;
+import DB_övn11_printChildren.Models.Child;
 
 
 public class PrintAllChildren {

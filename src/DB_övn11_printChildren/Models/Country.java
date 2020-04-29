@@ -1,16 +1,16 @@
-package V3_övn11_printChildren.Models;
+package DB_övn11_printChildren.Models;
 
-public class Present {
+public class Country {
 
     private int id;
     private String name;
     
-    public Present(int id, String name){
+    public Country(int id, String name){
         this.id = id;
         this.name = name;
     }
     
-    public Present(){}
+    public Country(){}
     
     public String getName(){
         return name;

@@ -1,8 +1,8 @@
-package V3_övn11_printChildren;
+package DB_övn11_printChildren;
 
-import V3_övn11_printChildren.Models.Country;
-import V3_övn11_printChildren.Models.Child;
-import V3_övn11_printChildren.Models.Present;
+import DB_övn11_printChildren.Models.Country;
+import DB_övn11_printChildren.Models.Child;
+import DB_övn11_printChildren.Models.Present;
 import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;

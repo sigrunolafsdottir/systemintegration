@@ -1,4 +1,4 @@
-package V3_övn8b_naughtyOrNice;
+package DB_övn8b_naughtyOrNice;
 
 import java.util.Scanner;
 

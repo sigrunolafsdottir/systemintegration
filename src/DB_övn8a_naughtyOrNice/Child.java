@@ -1,17 +1,19 @@
-package V3_övn7_tomtensDashboard;
+package DB_övn8a_naughtyOrNice;
 
 
 public class Child {
 
     private int id;
-    private boolean nice;
     private String name;
+    private boolean nice;
     
     public Child(int id, String name, boolean nice){
         this.id = id;
         this.name = name;
         this.nice = nice;
     }
+    
+    public Child(){}
     
     public String getName(){
         return name;
@@ -24,12 +26,13 @@ public class Child {
     public boolean getNice(){
         return nice;
     }
-    
-    public void setNice(boolean nice){
-        this.nice = nice;
+
+    public void printOut(){
+        if (name != null){
+            System.out.println(this.name + " is " + (nice ? "Nice" : "Naughty"));
+        }
+        else{
+            System.out.println("Not a valid name");
+        }
     }
-    
-//    public void printAllNames(){
-//        System.out.println(name + " ");
-//    }
 }

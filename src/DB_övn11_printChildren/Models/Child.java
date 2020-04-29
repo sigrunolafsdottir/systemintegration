@@ -1,4 +1,4 @@
-package V3_övn11_printChildren.Models;
+package DB_övn11_printChildren.Models;
 
 import java.util.List;
 import static java.util.stream.Collectors.toList;
